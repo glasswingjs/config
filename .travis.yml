@@ -1,0 +1,22 @@
+language: node_js
+
+node_js:
+  - "6"
+  - "8"
+  - "10"
+  - "lts/*"
+  - "node"
+
+before_script:
+  - npm install
+
+scripts:
+  - npm run test
+  - npm run build
+
+notifications:
+  email:
+    recipients:
+      - dragos.cirjan+glasswingjs@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
