@@ -6,11 +6,10 @@
 
 [![TravisCI](https://travis-ci.org/glasswingjs/config.svg?branch=master)](https://travis-ci.org/glasswingjs/config)
 
-[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.github.glasswingjs:config:config)](https://sonarcloud.io/dashboard/index/com.github.glasswingjs:config:config)
-[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs:config%3Aconfig&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=com.github.glasswingjs:config:config)
-[![SonarCloud Bugs](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs:config%3Aconfig&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=com.github.glasswingjs:config%3Aconfig)
-[![SonarCloud Vulnerabilities](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs:config%3Aconfig&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=com.github.glasswingjs:config%3Aconfig)
-
+[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.github.glasswingjs:config)](https://sonarcloud.io/dashboard/index/com.github.glasswingjs:config)
+[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs%3Aconfig&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=com.github.glasswingjs:config)
+[![SonarCloud Bugs](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs%3Aconfig&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=com.github.glasswingjs%3Aconfig)
+[![SonarCloud Vulnerabilities](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs%3Aconfig&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=com.github.glasswingjs%3Aconfig)
 <!-- [![CircleCI](https://circleci.com/gh/glasswingjs/config.svg?style=shield)](https://circleci.com/gh/glasswingjs/config) -->
 
 <!--
