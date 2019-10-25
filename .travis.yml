@@ -7,12 +7,21 @@ node_js:
   - "lts/*"
   - "node"
 
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
 before_script:
-  - npm install
+  - "test ! -d node_modules || npm prune"
 
 scripts:
   - npm run test
   - npm run build
+
+# after_script:
+#   - "test -e ./coverage/lcov.info && npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
 
 notifications:
   email:
