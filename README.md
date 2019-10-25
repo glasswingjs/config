@@ -5,12 +5,12 @@
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/glasswingjs/config/issues)
 
 [![TravisCI](https://travis-ci.org/glasswingjs/config.svg?branch=master)](https://travis-ci.org/glasswingjs/config)
-
-[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.github.glasswingjs:config)](https://sonarcloud.io/dashboard/index/com.github.glasswingjs:config)
-[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs%3Aconfig&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=com.github.glasswingjs:config)
-[![SonarCloud Bugs](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs%3Aconfig&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=com.github.glasswingjs%3Aconfig)
-[![SonarCloud Vulnerabilities](https://sonarcloud.io/api/badges/measure?key=com.github.glasswingjs%3Aconfig&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=com.github.glasswingjs%3Aconfig)
 <!-- [![CircleCI](https://circleci.com/gh/glasswingjs/config.svg?style=shield)](https://circleci.com/gh/glasswingjs/config) -->
+
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_config&metric=alert_status)](https://sonarcloud.io/dashboard?id=glasswingjs_config) 
+ [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_config&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=glasswingjs_config)
+ [![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_config&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=glasswingjs_config)
+ [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=glasswingjs_config&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=glasswingjs_config)
 
 <!--
 [![Donate to this project using Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/dragoscirjan)
