@@ -14,7 +14,7 @@ scripts:
   - npm run test
   - npm run build
 after_script:
-  - sonar-scanner
+  - test $TRAVIS_NODE_VERSION != '10' && sonar-scanner
 notifications:
   email:
     recipients:
