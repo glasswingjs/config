@@ -12,7 +12,7 @@ export const runTests = (classDescriptor: string, configPath: string, configRegi
     before(() => {
       configRegistrar(configPath)
       config = container.resolve('Config')
-      console.log(config)
+      // console.log(config)
     })
 
     after(() => {
