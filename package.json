@@ -1,7 +1,7 @@
 {
   "name": "@glasswing/config",
   "version": "0.0.1",
-  "description": "GlassWing Config",
+  "description": "GlassWingJs Config Package",
   "main": "dist/es2017/index.js",
   "scripts": {
     "build": "rollup -c --environment NODE_ENV:production",
@@ -17,7 +17,7 @@
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "test:html": "nyc --reporter html --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "test:watch": "nodemon --exec \"npm run test\"",
-    "git-hook:pre-commit": "npm run prettier:write && npm run lint && npm run test",
+    "git-hook:pre-commit": "npm run prettier:write && npm run lint && npm run test && npm run build",
     "serve": "ts-node src/index.ts",
     "serve:watch": "nodemon --exec \"npm run serve\""
   },
@@ -49,6 +49,7 @@
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "rollup": "^1.25.0",
+    "rollup-plugin-typescript2": "^0.24.3",
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
     "typescript": "^3.6.3",
@@ -61,7 +62,6 @@
     "json5": "^2.1.1",
     "object-path": "^0.11.4",
     "reflect-metadata": "^0.1.13",
-    "rollup-plugin-typescript2": "^0.24.3",
     "tsyringe": "^3.4.0",
     "yaml": "^1.7.1"
   },
