@@ -1,4 +1,4 @@
-# glasswing/content
+# @glasswing/config
 
 <!-- [![Npm Version](https://img.shields.io/npm/v/frameworks.svg)](https://www.npmjs.com/package/frameworks) -->
 [![HitCount](http://hits.dwyl.io/glasswingjs/config.svg)](http://hits.dwyl.io/glasswingjs/config)

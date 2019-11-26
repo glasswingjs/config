@@ -23,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dragoscirjan/template-ts.git"
+    "url": "git+https://github.com/glasswingjs/config.git"
   },
   "author": "Dragos Cirjan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dragoscirjan/template-ts/issues"
+    "url": "https://github.com/glasswingjs/config/issues"
   },
-  "homepage": "https://github.com/dragoscirjan/template-ts#readme",
+  "homepage": "https://github.com/glasswingjs/config",
   "devDependencies": {
     "@types/chai": "^4.2.3",
     "@types/dotenv": "^6.1.1",
