@@ -2,7 +2,7 @@
   "name": "@glasswing/config",
   "version": "0.0.1",
   "description": "GlassWingJs Config Package",
-  "main": "dist/es2017/index.js",
+  "main": "dist/commonjs/index.js",
   "scripts": {
     "build": "rollup -c --environment NODE_ENV:production",
     "build:dts": "dts-bundle-generator ./src/index.ts -o dist/index.d.ts",
