@@ -8,6 +8,7 @@
     "build:dts": "dts-bundle-generator ./src/index.ts -o dist/index.d.ts",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "postbuild": "npm run build:dts",
+    "postinstall": "npm run build",
     "prebuild": "cross-env rimraf dist",
     "pretest": "cross-env rimraf dist",
     "prettier": "prettier",
