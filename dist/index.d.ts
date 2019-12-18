@@ -27,14 +27,14 @@ export declare abstract class AbstractConfig implements Config {
 export declare class DotenvConfig extends AbstractConfig {
 	constructor(path: string);
 }
-export declare const registerDotenvConfig: (path: string) => import("tsyringe").DependencyContainer;
+export declare const registerDotenvConfig: (path: string, c?: DependencyContainer | undefined) => void;
 export declare class JsonConfig extends AbstractConfig {
 	constructor(path: string);
 }
-export declare const registerJsonConfig: (path: string) => import("tsyringe").DependencyContainer;
+export declare const registerJsonConfig: (path: string, c?: DependencyContainer | undefined) => void;
 export declare class YamlConfig extends AbstractConfig {
 	constructor(path: string);
 }
-export declare const registerYamlConfig: (path: string) => import("tsyringe").DependencyContainer;
+export declare const registerYamlConfig: (path: string, c?: DependencyContainer | undefined) => void;
 
 export {};

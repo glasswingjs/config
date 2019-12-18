@@ -79,8 +79,9 @@ var DotenvConfig = /** @class */ (function (_super) {
     ], DotenvConfig);
     return DotenvConfig;
 }(AbstractConfig));
-var registerDotenvConfig = function (path) {
-    return container.register('Config', {
+var registerDotenvConfig = function (path, c) {
+    c = c || container;
+    c.register('Config', {
         useFactory: function () { return new DotenvConfig(path); },
     });
 };
@@ -98,8 +99,9 @@ var JsonConfig = /** @class */ (function (_super) {
     ], JsonConfig);
     return JsonConfig;
 }(AbstractConfig));
-var registerJsonConfig = function (path) {
-    return container.register('Config', {
+var registerJsonConfig = function (path, c) {
+    c = c || container;
+    c.register('Config', {
         useFactory: function () { return new JsonConfig(path); },
     });
 };
@@ -117,8 +119,9 @@ var YamlConfig = /** @class */ (function (_super) {
     ], YamlConfig);
     return YamlConfig;
 }(AbstractConfig));
-var registerYamlConfig = function (path) {
-    return container.register('Config', {
+var registerYamlConfig = function (path, c) {
+    c = c || container;
+    c.register('Config', {
         useFactory: function () { return new YamlConfig(path); },
     });
 };

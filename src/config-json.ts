@@ -1,6 +1,6 @@
 import fs from 'fs'
 import * as json5 from 'json5'
-import {container, injectable} from 'tsyringe'
+import {container, DependencyContainer, injectable} from 'tsyringe'
 
 import {AbstractConfig} from './config'
 
@@ -12,7 +12,9 @@ export class JsonConfig extends AbstractConfig {
   }
 }
 
-export const registerJsonConfig = (path: string) =>
-  container.register('Config', {
+export const registerJsonConfig = (path: string, c?: DependencyContainer): void => {
+  c = c || container
+  c.register('Config', {
     useFactory: () => new JsonConfig(path),
   })
+}

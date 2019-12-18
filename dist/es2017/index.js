@@ -61,9 +61,12 @@ DotenvConfig = __decorate([
     injectable(),
     __metadata("design:paramtypes", [String])
 ], DotenvConfig);
-const registerDotenvConfig = (path) => container.register('Config', {
-    useFactory: () => new DotenvConfig(path),
-});
+const registerDotenvConfig = (path, c) => {
+    c = c || container;
+    c.register('Config', {
+        useFactory: () => new DotenvConfig(path),
+    });
+};
 
 let JsonConfig = class JsonConfig extends AbstractConfig {
     constructor(path) {
@@ -75,9 +78,12 @@ JsonConfig = __decorate([
     injectable(),
     __metadata("design:paramtypes", [String])
 ], JsonConfig);
-const registerJsonConfig = (path) => container.register('Config', {
-    useFactory: () => new JsonConfig(path),
-});
+const registerJsonConfig = (path, c) => {
+    c = c || container;
+    c.register('Config', {
+        useFactory: () => new JsonConfig(path),
+    });
+};
 
 let YamlConfig = class YamlConfig extends AbstractConfig {
     constructor(path) {
@@ -89,8 +95,11 @@ YamlConfig = __decorate([
     injectable(),
     __metadata("design:paramtypes", [String])
 ], YamlConfig);
-const registerYamlConfig = (path) => container.register('Config', {
-    useFactory: () => new YamlConfig(path),
-});
+const registerYamlConfig = (path, c) => {
+    c = c || container;
+    c.register('Config', {
+        useFactory: () => new YamlConfig(path),
+    });
+};
 
 export { AbstractConfig, DotenvConfig, JsonConfig, YamlConfig, registerDotenvConfig, registerJsonConfig, registerYamlConfig };

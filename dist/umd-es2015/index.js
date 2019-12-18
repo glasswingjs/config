@@ -64,9 +64,12 @@
       tsyringe.injectable(),
       __metadata("design:paramtypes", [String])
   ], exports.DotenvConfig);
-  const registerDotenvConfig = (path) => tsyringe.container.register('Config', {
-      useFactory: () => new exports.DotenvConfig(path),
-  });
+  const registerDotenvConfig = (path, c) => {
+      c = c || tsyringe.container;
+      c.register('Config', {
+          useFactory: () => new exports.DotenvConfig(path),
+      });
+  };
 
   exports.JsonConfig = class JsonConfig extends AbstractConfig {
       constructor(path) {
@@ -78,9 +81,12 @@
       tsyringe.injectable(),
       __metadata("design:paramtypes", [String])
   ], exports.JsonConfig);
-  const registerJsonConfig = (path) => tsyringe.container.register('Config', {
-      useFactory: () => new exports.JsonConfig(path),
-  });
+  const registerJsonConfig = (path, c) => {
+      c = c || tsyringe.container;
+      c.register('Config', {
+          useFactory: () => new exports.JsonConfig(path),
+      });
+  };
 
   exports.YamlConfig = class YamlConfig extends AbstractConfig {
       constructor(path) {
@@ -92,9 +98,12 @@
       tsyringe.injectable(),
       __metadata("design:paramtypes", [String])
   ], exports.YamlConfig);
-  const registerYamlConfig = (path) => tsyringe.container.register('Config', {
-      useFactory: () => new exports.YamlConfig(path),
-  });
+  const registerYamlConfig = (path, c) => {
+      c = c || tsyringe.container;
+      c.register('Config', {
+          useFactory: () => new exports.YamlConfig(path),
+      });
+  };
 
   exports.AbstractConfig = AbstractConfig;
   exports.registerDotenvConfig = registerDotenvConfig;

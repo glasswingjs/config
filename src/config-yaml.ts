@@ -1,5 +1,5 @@
 import fs from 'fs'
-import {container, injectable} from 'tsyringe'
+import {container, DependencyContainer, injectable} from 'tsyringe'
 import yaml from 'yaml'
 
 import {AbstractConfig} from './config'
@@ -12,7 +12,9 @@ export class YamlConfig extends AbstractConfig {
   }
 }
 
-export const registerYamlConfig = (path: string) =>
-  container.register('Config', {
+export const registerYamlConfig = (path: string, c?: DependencyContainer): void => {
+  c = c || container
+  c.register('Config', {
     useFactory: () => new YamlConfig(path),
   })
+}

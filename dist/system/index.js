@@ -91,8 +91,9 @@ System.register(['reflect-metadata', 'object-path', 'dotenv', 'fs', 'tsyringe', 
           ], DotenvConfig);
           return DotenvConfig;
       }(AbstractConfig)));
-      var registerDotenvConfig = exports('registerDotenvConfig', function (path) {
-          return container.register('Config', {
+      var registerDotenvConfig = exports('registerDotenvConfig', function (path, c) {
+          c = c || container;
+          c.register('Config', {
               useFactory: function () { return new DotenvConfig(path); },
           });
       });
@@ -110,8 +111,9 @@ System.register(['reflect-metadata', 'object-path', 'dotenv', 'fs', 'tsyringe', 
           ], JsonConfig);
           return JsonConfig;
       }(AbstractConfig)));
-      var registerJsonConfig = exports('registerJsonConfig', function (path) {
-          return container.register('Config', {
+      var registerJsonConfig = exports('registerJsonConfig', function (path, c) {
+          c = c || container;
+          c.register('Config', {
               useFactory: function () { return new JsonConfig(path); },
           });
       });
@@ -129,8 +131,9 @@ System.register(['reflect-metadata', 'object-path', 'dotenv', 'fs', 'tsyringe', 
           ], YamlConfig);
           return YamlConfig;
       }(AbstractConfig)));
-      var registerYamlConfig = exports('registerYamlConfig', function (path) {
-          return container.register('Config', {
+      var registerYamlConfig = exports('registerYamlConfig', function (path, c) {
+          c = c || container;
+          c.register('Config', {
               useFactory: function () { return new YamlConfig(path); },
           });
       });
