@@ -55,7 +55,7 @@
   }
 
   exports.DotenvConfig = class DotenvConfig extends AbstractConfig {
-      constructor(path) {
+      constructor(path = '.env') {
           super();
           this.config = dotenv.parse(fs.readFileSync(path));
       }
@@ -72,7 +72,7 @@
   };
 
   exports.JsonConfig = class JsonConfig extends AbstractConfig {
-      constructor(path) {
+      constructor(path = 'config.json') {
           super();
           this.config = json5.parse(fs.readFileSync(path).toString());
       }
@@ -89,7 +89,7 @@
   };
 
   exports.YamlConfig = class YamlConfig extends AbstractConfig {
-      constructor(path) {
+      constructor(path = 'config.yaml') {
           super();
           this.config = yaml.parse(fs.readFileSync(path).toString());
       }

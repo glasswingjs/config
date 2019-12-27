@@ -6,7 +6,7 @@ import {AbstractConfig} from './config'
 
 @injectable()
 export class DotenvConfig extends AbstractConfig {
-  constructor(path: string) {
+  constructor(path: string = '.env') {
     super()
     this.config = dotenv.parse(fs.readFileSync(path))
   }

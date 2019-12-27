@@ -6,7 +6,7 @@ import {AbstractConfig} from './config'
 
 @injectable()
 export class YamlConfig extends AbstractConfig {
-  constructor(path: string) {
+  constructor(path: string = 'config.yaml') {
     super()
     this.config = yaml.parse(fs.readFileSync(path).toString())
   }

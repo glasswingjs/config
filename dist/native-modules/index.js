@@ -69,6 +69,7 @@ function __metadata(metadataKey, metadataValue) {
 var DotenvConfig = /** @class */ (function (_super) {
     __extends(DotenvConfig, _super);
     function DotenvConfig(path) {
+        if (path === void 0) { path = '.env'; }
         var _this = _super.call(this) || this;
         _this.config = dotenv.parse(fs.readFileSync(path));
         return _this;
@@ -89,6 +90,7 @@ var registerDotenvConfig = function (path, c) {
 var JsonConfig = /** @class */ (function (_super) {
     __extends(JsonConfig, _super);
     function JsonConfig(path) {
+        if (path === void 0) { path = 'config.json'; }
         var _this = _super.call(this) || this;
         _this.config = parse(fs.readFileSync(path).toString());
         return _this;
@@ -109,6 +111,7 @@ var registerJsonConfig = function (path, c) {
 var YamlConfig = /** @class */ (function (_super) {
     __extends(YamlConfig, _super);
     function YamlConfig(path) {
+        if (path === void 0) { path = 'config.yaml'; }
         var _this = _super.call(this) || this;
         _this.config = yaml.parse(fs.readFileSync(path).toString());
         return _this;

@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rollup -c --environment NODE_ENV:production",
     "build:dts": "dts-bundle-generator ./src/index.ts -o dist/index.d.ts",
+    "clean": "cross-env rimraf .nyc_output .rollupcache dist",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "postbuild": "npm run build:dts",
     "prebuild": "cross-env rimraf dist",

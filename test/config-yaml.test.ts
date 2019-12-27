@@ -1,4 +1,4 @@
-import {registerYamlConfig} from '../src'
+import {registerYamlConfig, YamlConfig} from '../src'
 import {runTests} from './tests'
 
-runTests('YamlConfig', 'config.yml.template', registerYamlConfig)
+runTests('YamlConfig', 'config.yml.template', YamlConfig, registerYamlConfig)

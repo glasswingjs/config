@@ -52,7 +52,7 @@ function __metadata(metadataKey, metadataValue) {
 }
 
 let DotenvConfig = class DotenvConfig extends AbstractConfig {
-    constructor(path) {
+    constructor(path = '.env') {
         super();
         this.config = dotenv.parse(fs.readFileSync(path));
     }
@@ -69,7 +69,7 @@ const registerDotenvConfig = (path, c) => {
 };
 
 let JsonConfig = class JsonConfig extends AbstractConfig {
-    constructor(path) {
+    constructor(path = 'config.json') {
         super();
         this.config = parse(fs.readFileSync(path).toString());
     }
@@ -86,7 +86,7 @@ const registerJsonConfig = (path, c) => {
 };
 
 let YamlConfig = class YamlConfig extends AbstractConfig {
-    constructor(path) {
+    constructor(path = 'config.yaml') {
         super();
         this.config = yaml.parse(fs.readFileSync(path).toString());
     }

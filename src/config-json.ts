@@ -6,7 +6,7 @@ import {AbstractConfig} from './config'
 
 @injectable()
 export class JsonConfig extends AbstractConfig {
-  constructor(path: string) {
+  constructor(path: string = 'config.json') {
     super()
     this.config = json5.parse(fs.readFileSync(path).toString())
   }

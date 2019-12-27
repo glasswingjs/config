@@ -1,32 +1,68 @@
 /*global expect*/
 
 import {expect} from 'chai'
-import {container} from 'tsyringe'
+import {container, DependencyContainer} from 'tsyringe'
 
 import {Config} from '../src'
 
-export const runTests = (classDescriptor: string, configPath: string, configRegistrar: (path: string) => void) => {
-  describe('./src', () => {
-    let config: Config
+export const runTests = (
+  classDescriptor: string,
+  configPath: string,
+  klass: any,
+  configRegistrar: (path: string, c?: DependencyContainer) => void,
+) => {
+  describe('@glasswing/config', () => {
+    describe(`${classDescriptor} (kinda global)`, () => {
+      let config: Config
 
-    before(() => {
-      configRegistrar(configPath)
-      config = container.resolve('Config')
-      // console.log(config)
+      before(() => {
+        configRegistrar(configPath)
+        config = container.resolve('Config')
+      })
+
+      after(() => {
+        container.reset()
+      })
+
+      it(`::constructor() will return an object`, () => {
+        expect(new klass(configPath)).to.be.an('object')
+      })
+
+      it(`::inject() will return an object`, () => {
+        expect(config).to.be.an('object')
+      })
+
+      it(`::get('server.port') will return a value`, () => {
+        expect(config.get('server.port')).not.to.be.a('null')
+        expect(config.get('server.port')).not.to.be.an('undefined')
+        expect(config.get('server.port') as number).to.be.oneOf([3000, '3000'])
+      })
     })
+    describe(`${classDescriptor} (kinda local)`, () => {
+      let config: Config
 
-    after(() => {
-      container.reset()
-    })
+      before(() => {
+        configRegistrar(configPath, container)
+        config = container.resolve('Config')
+      })
 
-    it(`${classDescriptor}::constructor() will return an object`, () => {
-      expect(config).to.be.an('object')
-    })
+      after(() => {
+        container.reset()
+      })
 
-    it(`${classDescriptor}::get('server.port') will return a value`, () => {
-      expect(config.get('server.port')).not.to.be.a('null')
-      expect(config.get('server.port')).not.to.be.an('undefined')
-      expect(config.get('server.port') as number).to.be.oneOf([3000, '3000'])
+      it(`::constructor() will return an object`, () => {
+        expect(new klass(configPath)).to.be.an('object')
+      })
+
+      it(`::inject() will return an object`, () => {
+        expect(config).to.be.an('object')
+      })
+
+      it(`::get('server.port') will return a value`, () => {
+        expect(config.get('server.port')).not.to.be.a('null')
+        expect(config.get('server.port')).not.to.be.an('undefined')
+        expect(config.get('server.port') as number).to.be.oneOf([3000, '3000'])
+      })
     })
   })
 }

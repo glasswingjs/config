@@ -68,6 +68,7 @@ define('index', ['exports', 'reflect-metadata', 'object-path', 'dotenv', 'fs', '
   var DotenvConfig = /** @class */ (function (_super) {
       __extends(DotenvConfig, _super);
       function DotenvConfig(path) {
+          if (path === void 0) { path = '.env'; }
           var _this = _super.call(this) || this;
           _this.config = dotenv.parse(fs.readFileSync(path));
           return _this;
@@ -88,6 +89,7 @@ define('index', ['exports', 'reflect-metadata', 'object-path', 'dotenv', 'fs', '
   var JsonConfig = /** @class */ (function (_super) {
       __extends(JsonConfig, _super);
       function JsonConfig(path) {
+          if (path === void 0) { path = 'config.json'; }
           var _this = _super.call(this) || this;
           _this.config = json5.parse(fs.readFileSync(path).toString());
           return _this;
@@ -108,6 +110,7 @@ define('index', ['exports', 'reflect-metadata', 'object-path', 'dotenv', 'fs', '
   var YamlConfig = /** @class */ (function (_super) {
       __extends(YamlConfig, _super);
       function YamlConfig(path) {
+          if (path === void 0) { path = 'config.yaml'; }
           var _this = _super.call(this) || this;
           _this.config = yaml.parse(fs.readFileSync(path).toString());
           return _this;

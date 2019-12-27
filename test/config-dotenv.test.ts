@@ -1,4 +1,4 @@
-import {registerDotenvConfig} from '../src'
+import {DotenvConfig, registerDotenvConfig} from '../src'
 import {runTests} from './tests'
 
-runTests('DotenvConfig', '.env.template', registerDotenvConfig)
+runTests('DotenvConfig', '.env.template', DotenvConfig, registerDotenvConfig)
