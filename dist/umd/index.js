@@ -2,7 +2,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('reflect-metadata'), require('object-path'), require('dotenv'), require('fs'), require('tsyringe'), require('json5'), require('yaml')) :
   typeof define === 'function' && define.amd ? define(['exports', 'reflect-metadata', 'object-path', 'dotenv', 'fs', 'tsyringe', 'json5', 'yaml'], factory) :
   (global = global || self, factory((global.gw = global.gw || {}, global.gw.config = {}), null, global.objectPath, global.dotenv, global.fs, global.tsyringe, global.json5, global.yaml));
-}(this, function (exports, reflectMetadata, objectPath, dotenv, fs, tsyringe, json5, yaml) { 'use strict';
+}(this, (function (exports, reflectMetadata, objectPath, dotenv, fs, tsyringe, json5, yaml) { 'use strict';
 
   objectPath = objectPath && objectPath.hasOwnProperty('default') ? objectPath['default'] : objectPath;
   dotenv = dotenv && dotenv.hasOwnProperty('default') ? dotenv['default'] : dotenv;
@@ -142,4 +142,4 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
